@@ -1,1 +1,5 @@
-ollama
+langchain-ollama
+langchain-community
+langchain-tavily
+pydantic
+langchain
