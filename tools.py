@@ -1,23 +1,5 @@
-# Market Research Tools for AI Agent
-# ==================================
-
 # This file provides specialised tools that allow an AI agent to perform comprehensive 
 # market research by accessing various online sources of information. 
-
-# These tools enable the AI to:
-# - Search the web for current market trends
-# - Access academic research papers
-# - Find information about competitors
-# - Research industry-specific data 
-# - Gather general knowledge from Wikipedia
-# - And more.
-
-# How it works:
-# Each tools wraps and API or functionality that gives the aI access to different infromation
-# sources. When the AI agent needs specific information, it can select the appropriate tool
-# and use it to gather the data it needs. This modular approach allows for flexibility and
-# scalability, as new tools can be added or existing ones modified without affecting 
-# the overall system.
 
 import os # Used to access environment variables that store API keys
 from typing import List, Optional # Type hints for better code documentation
@@ -49,6 +31,8 @@ wiki_tool = WikipediaQueryRun(
 #     search_type="search",
 # )
 
+
+
 # --- ACAEDMIC & RESEARCH TOOLS ---
 
 # Arxiv tool: Provides access to scientific papers and academic research
@@ -60,6 +44,8 @@ arxiv_tool = ArxivQueryRun(api_wrapper=ArxivAPIWrapper())
 pubmed_tool = PubMedQueryRun(
     description="Search for medical and health-related research papers, useful for health industry market research.",
 )
+
+
 
 # --- WEB SEARCH TOOLS ---  
 
@@ -79,8 +65,9 @@ ddg_search_tool = Tool(
     description="Search the internet for market research, industry news and trends, business information, and financial data.",
 )
 
-# --- CUSTOM SPECIALIZED TOOLS ---
 
+
+# --- CUSTOM SPECIALIZED TOOLS ---
 # Potentially add custom tools that allow the AI to research specific companies, industries, or markets
 # These would be custom-built tools that wrap around specific APIs or data sources
 # Example: A tool that queries a specific database or API for industry reports
